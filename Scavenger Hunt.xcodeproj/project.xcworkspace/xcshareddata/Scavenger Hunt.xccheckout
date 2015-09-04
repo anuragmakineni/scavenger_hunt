@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5BB483DB-7E95-4B88-ACFB-9AE03695B3EF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Scavenger Hunt</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F0C298A2E7F4DD51C2DEC745CF8F586E00315C08</key>
+		<string>https://github.com/anuragmakineni/scavenger_hunt.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Scavenger Hunt.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F0C298A2E7F4DD51C2DEC745CF8F586E00315C08</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/anuragmakineni/scavenger_hunt.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F0C298A2E7F4DD51C2DEC745CF8F586E00315C08</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F0C298A2E7F4DD51C2DEC745CF8F586E00315C08</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Scavenger%20Hunt</string>
+		</dict>
+	</array>
+</dict>
+</plist>

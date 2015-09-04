@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 
 class ListViewController: UITableViewController {
-    var itemsList = [ScavengerHuntItem(name: "Train 🚆"), ScavengerHuntItem(name: "Car 🚗"), ScavengerHuntItem(name: "Plane ✈️")]
+    
+    var myManager = ItemsManager()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsList.count
+        return myManager.items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath) as! UITableViewCell //this is being cast to a UITableViewCell since the method returns "any object"
         
-        let item = itemsList[indexPath.row]
+        let item = myManager.items[indexPath.row]
         cell.textLabel?.text = item.name
         
         return cell
@@ -30,8 +31,11 @@ class ListViewController: UITableViewController {
             let addVC = segue.sourceViewController as! AddViewController
             
             if let newItem = addVC.newItem {
-                itemsList += [newItem]
-                let indexPath = NSIndexPath(forRow: itemsList.count - 1, inSection: 0)
+                
+                myManager.items += [newItem]
+                myManager.save()
+                
+                let indexPath = NSIndexPath(forRow: myManager.items.count - 1, inSection: 0)
                 tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic
                 )
             }
@@ -41,7 +45,8 @@ class ListViewController: UITableViewController {
     //implement delete feature
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            itemsList.removeAtIndex(indexPath.row)
+            myManager.items.removeAtIndex(indexPath.row)
+            myManager.save()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
